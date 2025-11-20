@@ -45,16 +45,16 @@ Partners can locate these in the **Google Earth Engine Data Catalog**.
 ### **Raster Datasets**
 Format: / Dataset / GEE ID / Purpose /
 
-/ Cropland Data Layer (CDL) / `USDA/NASS/CDL` / Winter cover-crop detection /
-/ SRTM DEM 30m / `USGS/SRTMGL1_003` / Slope, elevation, general topography /
-/ MERIT Hydro / `MERIT/Hydro/v1_0_1` / Flow accumulation weighting (primary function) /
+- / Cropland Data Layer (CDL) / `USDA/NASS/CDL` / Winter cover-crop detection /
+- / SRTM DEM 30m / `USGS/SRTMGL1_003` / Slope, elevation, general topography /
+- / MERIT Hydro / `MERIT/Hydro/v1_0_1` / Flow accumulation weighting (primary function) /
 
 ### **Vector Datasets**
 Format: / Dataset / Source in GEE / Purpose /
 
-/ USGS HUC12 Watersheds / Search “WBD” or “HUC12” in Data Catalog / Watershed boundaries /
-/ NHD Flowlines / Search “NHDFlowline” / Riparian buffer + proximity weighting /
-/ Partner Water-Quality Data / Upload CSV as **Table** / Nutrient concentration (mg/L), timestamps /
+- / USGS HUC12 Watersheds / Search “WBD” or “HUC12” in Data Catalog / Watershed boundaries /
+- / NHD Flowlines / Search “NHDFlowline” / Riparian buffer + proximity weighting /
+- / Partner Water-Quality Data / Upload CSV as **Table** / Nutrient concentration (mg/L), timestamps /
 
 ---
 
