@@ -106,9 +106,9 @@ This is included in Hydro_Map_PalmerFox.js. User will input their parameters int
 Format (CSV):
 
 system:time_start,value
-2023-03-01T00:00:00Z,1.84 (example value of nitrate + nitrite in mg/L)
-2023-03-14T00:00:00Z,1.92
-2023-05-01T00:00:00Z,2.10
+- 2023-03-01T00:00:00Z,1.84 (example value of nitrate + nitrite in mg/L)
+- 2023-03-14T00:00:00Z,1.92
+- 2023-05-01T00:00:00Z,2.10
 
 
 Upload it to GEE as:  
