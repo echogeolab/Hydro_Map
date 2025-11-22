@@ -1,42 +1,32 @@
 # Hydro_Map
 
-# Hydrologic Monitoring Map: Terrestrial Nitrogen Retention Index 
+# Hydrologic Model: Terrestrial Nitrogen Retention Index 
 
-This repository provides two Google Earth Engine (GEE) workflows developed during NASA DEVELOP Fall 2025 for evaluating **Terrestrial Nitrogen Retention (NRI)** and an interactive, partner accessible **Terrestrial Nitrogen Retention Index (TNRI)** that incorporates water-quality data, hydrographic parameters, and hydrologic connectivity.
+This repository provides two Google Earth Engine (GEE) workflows during NASA DEVELOP Fall 2025 for evaluating **Nitrogen Retention Indices (NRI)** across the lakeshore Wisconsin counties study region, and an interactive **Terrestrial Nitrogen Retention Index (TNRI)** output for project partners that incorporates water quality data, hydrographic parameters, and hydrologic connectivity.
 
 The scripts are:
 
-1. **Hydro_Map_Base.js** — Statewide NRI (no water-quality inputs)
-2. **Hydro_Map_PalmerFox.js** — TNRI demonstration for the Palmer–Fox HUC12 using nitrate + MERIT Hydro
+1. **Hydro_Map_Base.js** — Statewide NRI (no water quality inputs; baseline nitrogen retention index)
+2. **Hydro_Map_PalmerFox.js** — TNRI demonstration for the Palmer–Fox HUC12 using USGS nitrate + nitrite
 
-Partners (USDA NRCS, state agencies, universities) can apply this workflow to **any HUC12 watershed** by supplying:
-- their own water-quality CSV,  
+Project partners (USDA NRCS) can apply this workflow to any HUC12 watershed polygon with the following inputs:
+- water quality data .CSV,  
 - a matching discharge estimate, and  
-- a watershed boundary.
+- a HUC12 watershed boundary.
 
 ---
 
 ## Purpose
 
-The goal of this workflow is to map areas of likely **terrestrial nitrogen retention** by combining vegetation condition (NDVI), terrain (DEM + slope), hydrologic proximity to streams, and flow accumulation.  
+The goal of this workflow is to map areas of likely **terrestrial nitrogen retention** by combining vegetation density (NDVI), terrain (DEM + slope), in-situ water quality parameters, river channel proximity to streams, and MERIT Hydro parameters; including flow accumulation, flow direction, and hydrologically adjusted elevation + river channel width.  
 The TNRI extension incorporates **nutrient concentration and stream discharge** to estimate where landscapes most strongly interact with nutrient flux.
 
-This allows teams to:
-- identify key riparian corridors  
-- evaluate nutrient retention potential  
-- evaluate cover-crop overlaps  
-- compare watersheds  
-- generalize the workflow to new areas  
+This allows partners to:
+- identify key riparian corridors for improved soil health, runoff mitigation, stable water quality, and carbon sequstration productivity  
+- evaluate nutrient retention potential across cover crop adoption zones  
+- compare watersheds' NRI & TNRI productivity 
+- Expoand workflow outside of current ROI  
 
----
-
-## Repository Structure
-Hydro_Map_Base.js # Statewide NRI with interactive HUC12 watershed selection (no water-quality input)
-Hydro_Map_PalmerFox.js # Example TNRI using nitrate + discharge + MERIT Hydro
-README.md (you are here)
-
-
----
 
 ##  Data Sources 
 
@@ -46,8 +36,8 @@ Partners can locate these in the **Google Earth Engine Data Catalog**.
 Format: / Dataset / GEE ID / Purpose /
 
 - / Cropland Data Layer (CDL) / `USDA/NASS/CDL` / Winter cover-crop detection /
-- / SRTM DEM 30m / `USGS/SRTMGL1_003` / Slope, elevation, general topography /
-- / MERIT Hydro / `MERIT/Hydro/v1_0_1` / Flow accumulation weighting (primary function) /
+- / SRTM DEM 30m / `USGS/SRTMGL1_003` / Slope, elevation, topography /
+- / MERIT Hydro / `MERIT/Hydro/v1_0_1` / Hydrography; flow accumulation weighting (primary function) /
 
 ### **Vector Datasets**
 Format: / Dataset / Source in GEE / Purpose /
@@ -64,14 +54,14 @@ Format: / Dataset / Source in GEE / Purpose /
 https://code.earthengine.google.com/
 
 ### 2. Copy each `.js` file into its own script tab within GEE
-- Paste **Hydro_Map_Base.js** into Script 1  
-- Paste **Hydro_Map_PalmerFox.js** into Script 2  
+- Paste **Hydro_Map_Base.js** into Script A  
+- Paste **Hydro_Map_PalmerFox.js** into Script B  
 
 ### 3. Modify only what your project requires  
-- Your watershed HUC12  
-- Your water-quality CSV (mg/L)  
+- Your water-quality CSV  
 - Your discharge value (m³/s) from USGS NWIS  
-- Any custom date ranges  
+- Any custom date ranges
+- Your watershed HUC12 (Select polygon ==>     
 
 ### 4. Run  
 Outputs export as GeoTIFF to Google Drive.
