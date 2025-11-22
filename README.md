@@ -11,20 +11,19 @@ The scripts are:
 
 Project partners (USDA NRCS) can apply this workflow to any HUC12 watershed polygon with the following inputs:
 - water quality data .CSV,  
-- a matching discharge estimate, and  
-- a HUC12 watershed boundary.
+- a matching streamflow discharge estimate (USGS)  
+- HUC12 watershed boundary of interest.
 
 ---
 
-## Purpose
+## Application
 
 The goal of this workflow is to map areas of likely **terrestrial nitrogen retention** by combining vegetation density (NDVI), terrain (DEM + slope), in-situ water quality parameters, river channel proximity to streams, and MERIT Hydro parameters; including flow accumulation, flow direction, and hydrologically adjusted elevation + river channel width.  
-The TNRI extension incorporates **nutrient concentration and stream discharge** to estimate where landscapes most strongly interact with nutrient flux.
 
 This allows partners to:
 - identify key riparian corridors for improved soil health, runoff mitigation, stable water quality, and carbon sequstration productivity  
 - evaluate nutrient retention potential across cover crop adoption zones  
-- compare watersheds' NRI & TNRI productivity 
+- compare watersheds' NRI & TNRI   
 - Expoand workflow outside of current ROI  
 
 
