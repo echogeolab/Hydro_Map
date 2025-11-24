@@ -63,7 +63,7 @@ https://code.earthengine.google.com/
 - Your watershed HUC12 (Select polygon ==>     
 
 ### 4. Run  
-Outputs export as GeoTIFF to Google Drive.
+Outputs export as GeoTIFF to Google Drive upon selection of HUC12 watershed boundary.
 
 ---
 
